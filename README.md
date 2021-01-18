@@ -48,6 +48,3 @@ Docker containers<br>
 
 
 ###### This app is verified in Ubuntu 16.04 LTS and Ubuntu 20.04 LTS.
-=======
-# fibonacciCalculator
->>>>>>> 34fa224b350f3916234654b6658839748fb28ebd
