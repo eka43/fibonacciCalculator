@@ -1,0 +1,43 @@
+version: "3"
+services:
+  rabbitmq:
+   image: rabbitmq:3
+   container_name: rabbitmq
+   environment:
+   - RABBITMQ_DEFAULT_USER=guest
+   - RABBITMQ_DEFAULT_PASS=guest
+   ports:
+     - "127.0.0.1:5672:5672"
+      
+  go:
+    build:
+      context: .
+      dockerfile: go.Dockerfile
+    depends_on:
+       - rabbitmq
+       - java 
+
+  java:
+    build:
+      context: .
+      dockerfile: java.Dockerfile
+    ports:
+       - "127.0.0.1:8080:8080"
+    depends_on:
+       - rabbitmq     
+   
+
+  js:
+    #tty: true
+    stdin_open: true 
+    build:
+      context: .
+      dockerfile: js.Dockerfile
+    #tty: true  
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - /app/react-frontend/node_modules
+      - .:/app
+
+
