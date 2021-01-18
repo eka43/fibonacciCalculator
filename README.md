@@ -1,4 +1,3 @@
-## What is the overall goal of the project?
 <h2>Fibonacci Calculator</h2><br>
 <img alt="Fibonacci Calculator" src="sample.png?raw=true" width="80%"><br>
 Once a user input the n value, it will show the result and time to calucate the result in microseconds.<br>
