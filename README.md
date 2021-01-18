@@ -28,8 +28,8 @@ Once a user input the n value, it will show the result and time to calucate the 
 Docker containers<br>
 
 ## How to run
-- `git clone https://csil-git1.cs.surrey.sfu.ca/eka43/383-project.git`<br>
-- `cd 383-project`<br>
+- `git clone https://github.com/eka43/fibonacciCalculator.git`<br>
+- `cd fibonacciCalculator`<br>
 - `docker-compose build && docker-compose up`<br>
 - Once you see this (It might take around 20 seconds.)<br>
 - `go_1        | 2020/12/11 03:21:06  [*] Awaiting RPC requests`,<br>
